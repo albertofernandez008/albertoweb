@@ -9,17 +9,38 @@ import { toast } from "@/hooks/use-toast";
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Mensaje enviado",
-        description: "Te contactaré en menos de 24h. Gracias por confiar.",
+    try {
+      const data = new FormData(e.target as HTMLFormElement);
+      const res = await fetch("https://formspree.io/f/mvzdyzww", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
       });
-      (e.target as HTMLFormElement).reset();
-    }, 800);
+      if (res.ok) {
+        toast({
+          title: "Mensaje enviado ✓",
+          description: "Te contactaré en menos de 24h. Gracias por confiar.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        toast({
+          title: "Error al enviar",
+          description: "Inténtalo de nuevo o escríbeme directamente.",
+          variant: "destructive",
+        });
+      }
+    } catch {
+      toast({
+        title: "Error de conexión",
+        description: "Revisa tu conexión e inténtalo de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -51,6 +72,7 @@ export const Contact = () => {
               </Label>
               <Input
                 id="name"
+                name="name"
                 required
                 placeholder="Tu nombre"
                 className="mt-2 bg-background border-border focus-visible:ring-primary h-12"
@@ -63,6 +85,7 @@ export const Contact = () => {
               </Label>
               <Input
                 id="business"
+                name="business"
                 required
                 placeholder="Estética, peluquería, consultoría..."
                 className="mt-2 bg-background border-border focus-visible:ring-primary h-12"
@@ -75,6 +98,7 @@ export const Contact = () => {
               </Label>
               <Textarea
                 id="goal"
+                name="goal"
                 required
                 placeholder="Más reservas, posicionamiento en Google, modernizar mi web..."
                 rows={5}
