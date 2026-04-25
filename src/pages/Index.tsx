@@ -1,11 +1,11 @@
 import { Navbar } from "@/components/portfolio/Navbar";
-import { Hero } from "@/components/portfolio/Hero";
+import Hero from "@/components/portfolio/Hero";
 import { Method } from "@/components/portfolio/Method";
 import { Showcase } from "@/components/portfolio/Showcase";
 import { Services } from "@/components/portfolio/Services";
 import { About } from "@/components/portfolio/About";
-import { Contact } from "@/components/portfolio/Contact";
-import { Footer } from "@/components/portfolio/Footer";
+import Contact from "@/components/portfolio/Contact";
+import Footer from "@/components/portfolio/Footer";
 
 const Index = () => {
   return (
