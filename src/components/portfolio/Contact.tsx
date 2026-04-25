@@ -142,49 +142,30 @@ export const Contact = () => {
             </Button>
           </form>
 
-          {/* Calendly card */}
-          <div className="lg:col-span-2 p-8 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card relative overflow-hidden">
-            <div className="absolute top-0 right-0 h-40 w-40 bg-primary/20 blur-3xl rounded-full" />
+         {/* WhatsApp card */}
+<div className="lg:col-span-2 p-8 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card relative overflow-hidden">
+  <div className="absolute top-0 right-0 h-40 w-40 bg-primary/20 blur-3xl rounded-full" />
 
-            <div className="relative">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-accent text-primary-foreground mb-6 shadow-glow animate-pulse-glow">
-                <Calendar className="h-5 w-5" />
-              </div>
+  <div className="relative">
+    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-accent text-primary-foreground mb-6 shadow-glow animate-pulse-glow">
+      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.524 5.855L.057 23.882a.5.5 0 00.606.625l6.218-1.633A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.732.979.997-3.648-.235-.374A9.861 9.861 0 012.106 12C2.106 6.533 6.533 2.106 12 2.106S21.894 6.533 21.894 12 17.467 21.894 12 21.894z"/>
+      </svg>
+    </div>
 
-              <h3 className="text-2xl font-bold mb-3">
-                Agenda una reunión
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                30 minutos. Sin compromiso. Analizamos tu negocio y definimos qué
-                puede generarte más ingresos.
-              </p>
+    <h3 className="text-2xl font-bold mb-3">
+      Contáctame directamente
+    </h3>
+    <p className="text-muted-foreground mb-8 leading-relaxed">
+      Escríbeme por WhatsApp o llámame. Sin formularios, sin esperas. Hablamos de tu negocio cuando quieras.
+    </p>
 
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3 text-sm">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Clock className="h-4 w-4" />
-                  </span>
-                  <span className="text-foreground/80">30 minutos</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Video className="h-4 w-4" />
-                  </span>
-                  <span className="text-foreground/80">Videollamada</span>
-                </div>
-              </div>
-
-              <Button asChild variant="hero" size="lg" className="w-full">
-                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-                  Reservar slot
-                </a>
-              </Button>
-
-              <p className="font-mono text-[11px] text-muted-foreground text-center mt-4">
-                // Próximos huecos disponibles esta semana
-              </p>
-            </div>
-          </div>
+    <div className="space-y-3 mb-8">
+      <div className="flex items-center gap-3 text-sm">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.
         </div>
       </div>
     </section>
