@@ -80,6 +80,33 @@ export const Contact = () => {
             </div>
 
             <div>
+              <Label htmlFor="email" className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                Email
+              </Label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="tucorreo@email.com"
+                className="mt-2 bg-background border-border focus-visible:ring-primary h-12"
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="phone" className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                Teléfono <span className="text-muted-foreground/50 normal-case">(opcional)</span>
+              </Label>
+              <Input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="+34 600 000 000"
+                className="mt-2 bg-background border-border focus-visible:ring-primary h-12"
+              />
+            </div>
+
+            <div>
               <Label htmlFor="business" className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 Tipo de Negocio
               </Label>
